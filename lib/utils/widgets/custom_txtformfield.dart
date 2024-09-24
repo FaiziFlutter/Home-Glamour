@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_glamour/const/color_scheme.dart';
+import 'package:home_glamour/const/global_var.dart';
+import 'package:home_glamour/utils/widgets/custom_text.dart';
 
 class CustomTxtformfield extends StatelessWidget {
   const CustomTxtformfield(
@@ -17,7 +19,18 @@ class CustomTxtformfield extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(text),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: CustomText(
+            text: text,
+            left: 0,
+            top: 4,
+            bottom: 4,
+            fontWeight: FontWeight.bold,
+            fontFamily: poppins(),
+            color: colorSchemeLight.outline,
+          ),
+        ),
         TextFormField(
           obscureText: obscureText,
           onSaved: onSaved,
