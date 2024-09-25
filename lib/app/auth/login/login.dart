@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_glamour/app/auth/login/login.dart';
+import 'package:home_glamour/app/auth/register/register.dart';
 import 'package:home_glamour/const/app_paddings.dart';
 import 'package:home_glamour/const/global_var.dart';
 import 'package:home_glamour/utils/theme/theme.dart';
@@ -9,8 +9,8 @@ import '../../../const/text_size.dart';
 import '../../../utils/widgets/custom_text.dart';
 import '../../../utils/widgets/custom_txtformfield.dart';
 
-class Register extends StatelessWidget {
-  const Register({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,18 +34,34 @@ class Register extends StatelessWidget {
                   letterSpacing: 3,
                 ),
                 CustomText(
-                  text: 'Sign up as a customer to buy our services',
+                  text: 'Log In as a customer to buy our services',
                   fontSize: AppTextSize.titleMediumFont,
                   fontFamily: mulish(),
                 ),
-                const CustomTxtformfield(text: 'Name'),
                 const CustomTxtformfield(text: 'Email'),
                 const CustomTxtformfield(text: 'Password'),
-                const CustomTxtformfield(text: 'Phone Number'),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const Register();
+                        },
+                      ),
+                    );
+                  },
+                  child: const CustomText(
+                    top: 10,
+                    bottom: 10,
+                    text: "Forgot Password",
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
                 CustomButton(
-                  top: 28,
                   onTap: () {},
-                  text: 'Sign Up',
+                  text: 'Sign In',
                   height: 50,
                   width: double.infinity,
                 ),
@@ -54,7 +70,7 @@ class Register extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const CustomText(
-                      text: 'Already have an account? ',
+                      text: "Don't have an account? ",
                       right: 0,
                     ),
                     TextButton(
@@ -63,13 +79,13 @@ class Register extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return const Login();
+                              return const Register();
                             },
                           ),
                         );
                       },
                       child: const CustomText(
-                        text: "Log In",
+                        text: "Register",
                         left: 0,
                       ),
                     ),
