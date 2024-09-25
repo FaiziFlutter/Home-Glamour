@@ -5,7 +5,7 @@ import 'package:home_glamour/const/color_scheme.dart';
 import 'package:home_glamour/const/global_var.dart';
 import 'package:home_glamour/const/text_size.dart';
 import 'package:home_glamour/utils/widgets/custom_text.dart';
-import 'package:home_glamour/utils/widgets/cutom_button.dart';
+import 'package:home_glamour/utils/widgets/custom_button.dart';
 
 class Side extends StatefulWidget {
   const Side({super.key});

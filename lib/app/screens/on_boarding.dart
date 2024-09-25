@@ -3,7 +3,7 @@ import 'package:home_glamour/app/screens/side.dart';
 import 'package:home_glamour/const/global_var.dart';
 import 'package:home_glamour/const/text_size.dart';
 import 'package:home_glamour/utils/widgets/custom_text.dart';
-import 'package:home_glamour/utils/widgets/cutom_button.dart';
+import 'package:home_glamour/utils/widgets/custom_button.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
@@ -65,6 +65,7 @@ class _OnBoardingState extends State<OnBoarding> {
               alignment: AlignmentDirectional.bottomEnd,
               child: CustomButton(
                 text: 'Next',
+                right: 8,
                 onTap: () {
                   Navigator.pushReplacement(
                     context,
