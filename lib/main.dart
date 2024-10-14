@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:home_glamour/app/screens/on_boarding.dart';
+import 'package:get/get.dart';
 import 'package:home_glamour/const/color_scheme.dart';
-import 'package:home_glamour/const/text_size.dart';
+import 'package:home_glamour/utils/languages.dart';
+import 'package:home_glamour/utils/routes.dart';
+import 'package:home_glamour/utils/widget_themes/appbar_theme.dart';
 
 void main() {
   runApp(
@@ -14,21 +16,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Home Glamour',
+      locale: const Locale('en', 'US'),
+      fallbackLocale: const Locale('en', 'US'),
+      translations: Languages(),
+      initialRoute: AppRoutes.introductionScreen,
+      getPages: AppRoutes.routes,
+      builder: (context, child) => SafeArea(child: child!),
       theme: ThemeData(
         colorScheme: colorSchemeLight,
-        appBarTheme: AppBarTheme(
-            centerTitle: true,
-            backgroundColor: colorSchemeLight.surface,
-            titleTextStyle: const TextStyle(
-                fontSize: AppTextSize.titleLargeFont,
-                fontWeight: FontWeight.w400),
-            actionsIconTheme: IconThemeData(color: colorSchemeLight.onSurface)),
+        appBarTheme: lightAppBarTheme,
         useMaterial3: true,
       ),
-      home: const OnBoarding(),
     );
   }
 }

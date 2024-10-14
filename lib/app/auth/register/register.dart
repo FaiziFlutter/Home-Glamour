@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:home_glamour/app/auth/login/login.dart';
+import 'package:get/get.dart';
+
 import 'package:home_glamour/const/app_paddings.dart';
 import 'package:home_glamour/const/global_var.dart';
-import 'package:home_glamour/utils/theme/theme.dart';
-import 'package:home_glamour/utils/widgets/custom_button.dart';
-
+import 'package:home_glamour/utils/widget_themes/app_theme.dart';
+import 'package:home_glamour/widgets/custom_button.dart';
 import '../../../const/text_size.dart';
-import '../../../utils/widgets/custom_text.dart';
-import '../../../utils/widgets/custom_txtformfield.dart';
+import '../../../widgets/custom_text.dart';
+import '../../../widgets/custom_txtformfield.dart';
 
 class Register extends StatelessWidget {
   const Register({super.key});
@@ -36,14 +36,14 @@ class Register extends StatelessWidget {
                 CustomText(
                   text: 'Sign up as a customer to buy our services',
                   fontSize: AppTextSize.titleMediumFont,
-                  fontFamily: mulish(),
+                  fontFamily: poppins(),
                 ),
                 const CustomTxtformfield(text: 'Name'),
                 const CustomTxtformfield(text: 'Email'),
                 const CustomTxtformfield(text: 'Password'),
                 const CustomTxtformfield(text: 'Phone Number'),
                 CustomButton(
-                  top: 28,
+                  mTop: 28,
                   onTap: () {},
                   text: 'Sign Up',
                   height: 50,
@@ -59,14 +59,7 @@ class Register extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return const Login();
-                            },
-                          ),
-                        );
+                        Get.toNamed('/login');
                       },
                       child: const CustomText(
                         text: "Log In",
