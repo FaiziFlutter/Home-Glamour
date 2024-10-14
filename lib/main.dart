@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       locale: const Locale('en', 'US'),
       fallbackLocale: const Locale('en', 'US'),
       translations: Languages(),
-      initialRoute: AppRoutes.introductionScreen,
+      initialRoute: AppRoutes.homeScreen,
       getPages: AppRoutes.routes,
       builder: (context, child) => SafeArea(child: child!),
       theme: ThemeData(

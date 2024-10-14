@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_glamour/const/color_scheme.dart';
 import 'package:home_glamour/const/global_var.dart';
 
 class CustomText extends StatelessWidget {
@@ -47,7 +48,7 @@ class CustomText extends StatelessWidget {
         textDirection: TextDirection.ltr,
         style: TextStyle(
           backgroundColor: backgroundColor,
-          color: color,
+          color: color ?? colorSchemeLight.onSurface,
           fontFamily: fontFamily ?? poppins(),
           fontSize: fontSize,
           fontWeight: fontWeight,
