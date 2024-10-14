@@ -211,7 +211,7 @@ class $AssetsImagesGen {
   /// File path: assets/images/img3.png
   AssetGenImage get img3 => const AssetGenImage('assets/images/img3.png');
 
-  /// File path: assets/images/img3.png
+  /// File path: assets/images/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
 
   /// List of all assets

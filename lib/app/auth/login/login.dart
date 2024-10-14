@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:home_glamour/app/auth/register/register.dart';
+import 'package:get/get.dart';
 import 'package:home_glamour/const/app_paddings.dart';
 import 'package:home_glamour/const/global_var.dart';
-import 'package:home_glamour/utils/theme/theme.dart';
-import 'package:home_glamour/utils/widgets/custom_button.dart';
+import 'package:home_glamour/utils/widget_themes/app_theme.dart';
+import 'package:home_glamour/widgets/custom_button.dart';
 
 import '../../../const/text_size.dart';
-import '../../../utils/widgets/custom_text.dart';
-import '../../../utils/widgets/custom_txtformfield.dart';
+import '../../../widgets/custom_text.dart';
+import '../../../widgets/custom_txtformfield.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -36,20 +36,13 @@ class Login extends StatelessWidget {
                 CustomText(
                   text: 'Log In as a customer to buy our services',
                   fontSize: AppTextSize.titleMediumFont,
-                  fontFamily: mulish(),
+                  fontFamily: poppins(),
                 ),
                 const CustomTxtformfield(text: 'Email'),
                 const CustomTxtformfield(text: 'Password'),
                 TextButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return const Register();
-                        },
-                      ),
-                    );
+                    Get.toNamed('/forgotpassword');
                   },
                   child: const CustomText(
                     top: 10,
@@ -60,7 +53,9 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 CustomButton(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed('/agreement');
+                  },
                   text: 'Sign In',
                   height: 50,
                   width: double.infinity,
@@ -75,14 +70,7 @@ class Login extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return const Register();
-                            },
-                          ),
-                        );
+                        Get.toNamed('/register');
                       },
                       child: const CustomText(
                         text: "Register",

@@ -11,8 +11,3 @@ double appWidth(context) => MediaQuery.sizeOf(context).width;
 
 String? poppins() => GoogleFonts.poppins().fontFamily;
 
-String? mulish() => GoogleFonts.mulish().fontFamily;
-
-String? inter() => GoogleFonts.inter().fontFamily;
-
-String? roboto() => GoogleFonts.roboto().fontFamily;

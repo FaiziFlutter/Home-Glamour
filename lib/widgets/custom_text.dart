@@ -48,7 +48,7 @@ class CustomText extends StatelessWidget {
         style: TextStyle(
           backgroundColor: backgroundColor,
           color: color,
-          fontFamily: fontFamily ?? roboto(),
+          fontFamily: fontFamily ?? poppins(),
           fontSize: fontSize,
           fontWeight: fontWeight,
           fontStyle: fontStyle,

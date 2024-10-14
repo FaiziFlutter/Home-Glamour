@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:home_glamour/app/screens/side.dart';
+import 'package:home_glamour/app/screens/onboarding/welcome_screen.dart';
 import 'package:home_glamour/const/global_var.dart';
 import 'package:home_glamour/const/text_size.dart';
-import 'package:home_glamour/utils/widgets/custom_text.dart';
-import 'package:home_glamour/utils/widgets/custom_button.dart';
+import 'package:home_glamour/widgets/custom_text.dart';
+import 'package:home_glamour/widgets/custom_button.dart';
 
-class OnBoarding extends StatefulWidget {
-  const OnBoarding({super.key});
+class IntroductionScreen extends StatefulWidget {
+  const IntroductionScreen({super.key});
 
   @override
-  State<OnBoarding> createState() => _OnBoardingState();
+  State<IntroductionScreen> createState() => _IntroductionScreenState();
 }
 
-class _OnBoardingState extends State<OnBoarding> {
+class _IntroductionScreenState extends State<IntroductionScreen> {
   final PageController _pageController = PageController();
   int currentPage = 0;
 
@@ -65,13 +65,13 @@ class _OnBoardingState extends State<OnBoarding> {
               alignment: AlignmentDirectional.bottomEnd,
               child: CustomButton(
                 text: 'Next',
-                right: 8,
+                mRight: 8,
                 onTap: () {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return const Side();
+                        return const WelcomeScreen();
                       },
                     ),
                   );
@@ -99,7 +99,7 @@ Widget firstPage(BuildContext context) {
         color: colorScheme(context).primary,
         fontSize: AppTextSize.headlineMediumFont,
         fontWeight: FontWeight.w600,
-        fontFamily: roboto(),
+        fontFamily: poppins(),
       ),
       CustomText(
         top: appheight(context) * 0.02,
@@ -107,7 +107,7 @@ Widget firstPage(BuildContext context) {
             'Choose from a range of services such as makeup, hair, heena and nails! ',
         fontSize: AppTextSize.bodySmallFont,
         fontWeight: FontWeight.w500,
-        fontFamily: roboto(),
+        fontFamily: poppins(),
       ),
     ],
   );
@@ -128,7 +128,7 @@ Widget secondPage(BuildContext context) {
         color: colorScheme(context).primary,
         fontSize: AppTextSize.headlineMediumFont,
         fontWeight: FontWeight.w600,
-        fontFamily: roboto(),
+        fontFamily: poppins(),
       ),
       CustomText(
         top: appheight(context) * 0.02,
@@ -136,7 +136,7 @@ Widget secondPage(BuildContext context) {
             'Book a time slot for the service you require,make any payments where applicable and you are ready to go!',
         fontSize: AppTextSize.bodySmallFont,
         fontWeight: FontWeight.w500,
-        fontFamily: roboto(),
+        fontFamily: poppins(),
       ),
     ],
   );
@@ -157,7 +157,7 @@ Widget thirdPage(BuildContext context) {
         color: colorScheme(context).primary,
         fontSize: AppTextSize.headlineMediumFont,
         fontWeight: FontWeight.w600,
-        fontFamily: roboto(),
+        fontFamily: poppins(),
       ),
       CustomText(
         top: appheight(context) * 0.02,
@@ -165,7 +165,7 @@ Widget thirdPage(BuildContext context) {
             'Whether you are looking for a service or promoting your home bussiness, we haveoptions for everyone! ',
         fontSize: AppTextSize.bodySmallFont,
         fontWeight: FontWeight.w500,
-        fontFamily: roboto(),
+        fontFamily: poppins(),
       ),
     ],
   );

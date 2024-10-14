@@ -7,4 +7,10 @@ class AppTheme {
       colorScheme: colorSchemeLight,
     );
   }
+
+  static ThemeData get dark {
+    return ThemeData(
+      colorScheme: colorSchemeDark,
+    );
+  }
 }

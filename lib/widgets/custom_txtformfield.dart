@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_glamour/const/color_scheme.dart';
 import 'package:home_glamour/const/global_var.dart';
-import 'package:home_glamour/utils/widgets/custom_text.dart';
+import 'package:home_glamour/widgets/custom_text.dart';
 
 class CustomTxtformfield extends StatelessWidget {
   const CustomTxtformfield(
