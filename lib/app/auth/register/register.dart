@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:home_glamour/const/app_paddings.dart';
 import 'package:home_glamour/const/global_var.dart';
+import 'package:home_glamour/utils/routes.dart';
 import 'package:home_glamour/utils/widget_themes/app_theme.dart';
 import 'package:home_glamour/widgets/custom_button.dart';
 import '../../../const/text_size.dart';
@@ -59,7 +60,7 @@ class Register extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        Get.toNamed('/login');
+                        Get.offAndToNamed(AppRoutes.login);
                       },
                       child: const CustomText(
                         text: "Log In",

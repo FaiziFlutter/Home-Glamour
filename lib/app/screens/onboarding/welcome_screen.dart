@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'package:home_glamour/app/auth/register/register.dart';
 import 'package:home_glamour/const/app_paddings.dart';
 import 'package:home_glamour/const/global_var.dart';
 import 'package:home_glamour/const/text_size.dart';
+import 'package:home_glamour/utils/routes.dart';
 import 'package:home_glamour/widgets/custom_text.dart';
 import 'package:home_glamour/widgets/custom_button.dart';
 
@@ -90,14 +89,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             CustomButton(
               onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const Register();
-                    },
-                  ),
-                );
+                Get.offNamed(AppRoutes.login);
               },
               text: 'customer'.tr,
               textColor: colorSchemeLight.onSurface,

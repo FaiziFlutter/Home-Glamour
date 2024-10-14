@@ -29,7 +29,12 @@ class ForgotPassword extends StatelessWidget {
               text: 'Enter OTP',
               fontWeight: bold,
             ),
-            const OTPField(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                for (int i = 1; i <= 6; i++) const OTPField(),
+              ],
+            ),
             // const CustomButton(
             //   width: double.infinity,
             //   text: 'Verify',

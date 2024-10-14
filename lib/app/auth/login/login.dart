@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:home_glamour/const/app_paddings.dart';
 import 'package:home_glamour/const/global_var.dart';
+import 'package:home_glamour/utils/routes.dart';
 import 'package:home_glamour/utils/widget_themes/app_theme.dart';
 import 'package:home_glamour/widgets/custom_button.dart';
 
@@ -42,7 +43,7 @@ class Login extends StatelessWidget {
                 const CustomTxtformfield(text: 'Password'),
                 TextButton(
                   onPressed: () {
-                    Get.toNamed('/forgotpassword');
+                    Get.toNamed(AppRoutes.forgetPassword);
                   },
                   child: const CustomText(
                     top: 10,
@@ -54,9 +55,9 @@ class Login extends StatelessWidget {
                 ),
                 CustomButton(
                   onTap: () {
-                    Get.toNamed('/agreement');
+                    Get.toNamed(AppRoutes.agreement);
                   },
-                  text: 'Sign In',
+                  text: 'Log In',
                   height: 50,
                   width: double.infinity,
                 ),
@@ -70,7 +71,7 @@ class Login extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        Get.toNamed('/register');
+                        Get.offAndToNamed(AppRoutes.register);
                       },
                       child: const CustomText(
                         text: "Register",
