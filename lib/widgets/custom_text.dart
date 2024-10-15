@@ -14,10 +14,10 @@ class CustomText extends StatelessWidget {
     this.fontStyle,
     this.letterSpacing,
     this.wordSpacing,
-    this.top = 2,
-    this.bottom = 2,
-    this.left = 0,
-    this.right = 12,
+    this.top,
+    this.bottom,
+    this.left,
+    this.right,
     this.textAlign,
   });
   final String text;
@@ -39,10 +39,10 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-          left: left ?? 12,
+          left: left ?? 0,
           top: top ?? 2,
           bottom: bottom ?? 2,
-          right: right ?? 12),
+          right: right ?? 0),
       child: Text(
         text,
         softWrap: true,

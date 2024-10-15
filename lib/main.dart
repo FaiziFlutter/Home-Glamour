@@ -4,6 +4,7 @@ import 'package:home_glamour/const/color_scheme.dart';
 import 'package:home_glamour/utils/languages.dart';
 import 'package:home_glamour/utils/routes.dart';
 import 'package:home_glamour/utils/widget_themes/appbar_theme.dart';
+import 'package:home_glamour/utils/widget_themes/bottom_nav_theme.dart';
 
 void main() {
   runApp(
@@ -22,10 +23,10 @@ class MyApp extends StatelessWidget {
       locale: const Locale('en', 'US'),
       fallbackLocale: const Locale('en', 'US'),
       translations: Languages(),
-      initialRoute: AppRoutes.homeScreen,
+      initialRoute: AppRoutes.bottomBar,
       getPages: AppRoutes.routes,
-      builder: (context, child) => SafeArea(child: child!),
       theme: ThemeData(
+        bottomNavigationBarTheme: buildBottomNavigationBarTheme(),
         colorScheme: colorSchemeLight,
         appBarTheme: lightAppBarTheme,
         useMaterial3: true,
