@@ -248,8 +248,17 @@ class $AssetsImagesGen {
   /// File path: assets/images/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
 
+  /// File path: assets/images/servicesnear.png
+  AssetGenImage get servicesnear =>
+      const AssetGenImage('assets/images/servicesnear.png');
+
+  /// File path: assets/images/featured.png
+  AssetGenImage get featured =>
+      const AssetGenImage('assets/images/featured.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [img, img2, img3, logo];
+  List<AssetGenImage> get values =>
+      [img, img2, img3, logo, featured, servicesnear];
 }
 
 class $AssetsLauncherIconGen {

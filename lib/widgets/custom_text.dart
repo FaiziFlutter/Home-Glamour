@@ -16,7 +16,7 @@ class CustomText extends StatelessWidget {
     this.wordSpacing,
     this.top = 2,
     this.bottom = 2,
-    this.left = 12,
+    this.left = 0,
     this.right = 12,
     this.textAlign,
   });
