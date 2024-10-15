@@ -65,6 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               CustomText(
                 text: "Let's Explore categories to find best services for you.",
+                bottom: 15,
                 textAlign: TextAlign.start,
                 color: colorSchemeLight.outline.withOpacity(0.8),
               ),
