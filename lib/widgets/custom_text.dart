@@ -18,6 +18,7 @@ class CustomText extends StatelessWidget {
     this.bottom = 2,
     this.left = 12,
     this.right = 12,
+    this.textAlign,
   });
   final String text;
   final Color? backgroundColor;
@@ -32,6 +33,7 @@ class CustomText extends StatelessWidget {
   final double? bottom;
   final double? left;
   final double? right;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +46,7 @@ class CustomText extends StatelessWidget {
       child: Text(
         text,
         softWrap: true,
-        textAlign: TextAlign.center,
+        textAlign: textAlign ?? TextAlign.center,
         textDirection: TextDirection.ltr,
         style: TextStyle(
           backgroundColor: backgroundColor,
