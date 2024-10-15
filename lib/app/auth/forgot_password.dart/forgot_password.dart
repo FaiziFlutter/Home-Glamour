@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_glamour/const/app_paddings.dart';
-import 'package:home_glamour/const/constants.dart';
+import 'package:home_glamour/const/global_var.dart';
 import 'package:home_glamour/const/text_size.dart';
 import 'package:home_glamour/widgets/custom_appbar.dart';
 import 'package:home_glamour/widgets/custom_text.dart';
@@ -27,7 +27,7 @@ class ForgotPassword extends StatelessWidget {
               top: 16,
               bottom: 16,
               text: 'Enter OTP',
-              fontWeight: bold,
+              fontWeight: bold(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
