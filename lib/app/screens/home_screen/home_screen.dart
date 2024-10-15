@@ -31,41 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body: CustomPadding(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-              Row(
-              children:  [
-                const CustomText(
-                  text: 'Hello, Maria',
-                  fontSize: AppTextSize.titleLargeFont,
-                ),
-                const Spacer(),
-                Assets.icons.icNotification.svg(),
-              ],
-            ),
-            const CustomText(
-              text: "Let's Explore categories to find best services for you.",
-              textAlign: TextAlign.start,
-            ),
-            const CustomText(
-              text: 'Explore Categories',
-              fontSize: AppTextSize.titleMediumFont,
-            ),
-            SizedBox(
-              height: 200,
-              child: GridView.builder(
-                itemCount: 8,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 4),
-                itemBuilder: (context, index) {
-                  return;
-                },
-              ),
-            ),
-          ],
       body: SingleChildScrollView(
         child: CustomPadding(
           child: Column(
@@ -120,13 +85,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       colorSchemeLight.secondaryContainer.withOpacity(0.6),
                 ),
               ),
+              SizedBox(
+                height: 10,
+              ),
               const CustomText(
                 top: 15,
                 text: 'Explore Categories',
                 fontSize: AppTextSize.titleMediumFont,
               ),
               SizedBox(
-                height: 200,
+                height: 230,
                 child: GridView.builder(
                   physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
