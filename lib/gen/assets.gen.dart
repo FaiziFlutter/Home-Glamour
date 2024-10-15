@@ -182,6 +182,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_visa.svg
   SvgGenImage get icVisa => const SvgGenImage('assets/icons/ic_visa.svg');
 
+  /// File path: assets/icons/ic_category.svg
+  SvgGenImage get icCategory =>
+      const SvgGenImage('assets/icons/ic_category.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
         icApple,
@@ -229,7 +233,8 @@ class $AssetsIconsGen {
         icTailoring,
         icTermsOutlined,
         icUserOutlined,
-        icVisa
+        icVisa,
+        icCategory,
       ];
 }
 

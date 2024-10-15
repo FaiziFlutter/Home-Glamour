@@ -71,9 +71,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               TextFormField(
                 decoration: InputDecoration(
-                  suffixIcon: Icon(
-                    Icons.search,
-                    color: colorSchemeLight.primary,
+                  suffixIcon: Padding(
+                    padding: EdgeInsets.all(appheight(context) * 0.02),
+                    child: Assets.icons.icSearchToggleOutlined.svg(),
                   ),
                   hintText: 'Search services near you',
                   hintStyle: TextStyle(
@@ -108,14 +108,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             radius: 25,
                             backgroundColor:
                                 colorSchemeLight.secondaryContainer,
-                            child: SvgPicture.asset(
-                                availableCategories[index].icon),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SvgPicture.asset(
+                                  availableCategories[index].icon),
+                            ),
                           ),
                           CustomText(
-                            top: 0,
-                            bottom: 0,
-                            left: 0,
-                            right: 0,
                             text: availableCategories[index].name,
                             fontSize: AppTextSize.bodyxSmallFont,
                           ),
@@ -125,8 +124,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
               ),
-
-              /////////////////////////////////////////
 
               Row(
                 children: [
