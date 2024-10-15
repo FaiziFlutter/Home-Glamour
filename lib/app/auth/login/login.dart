@@ -49,8 +49,7 @@ class Login extends StatelessWidget {
                     top: 10,
                     bottom: 10,
                     text: "Forgot Password",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
+                    fontSize: 15,
                   ),
                 ),
                 CustomButton(
@@ -74,6 +73,7 @@ class Login extends StatelessWidget {
                         Get.offAndToNamed(AppRoutes.register);
                       },
                       child: const CustomText(
+                        color: Color(0xffce5b78),
                         text: "Register",
                         left: 0,
                       ),
