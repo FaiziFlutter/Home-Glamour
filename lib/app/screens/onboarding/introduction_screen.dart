@@ -39,7 +39,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: appheight(context) * 0.9,
+              height: appheight(context) * 0.85,
               child: PageView(
                 controller: _pageController,
                 onPageChanged: (index) {
@@ -61,6 +61,9 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                 buildIndicator(1),
                 buildIndicator(2),
               ],
+            ),
+            SizedBox(
+              height: appheight(context) * 0.03,
             ),
             if (currentPage == 2)
               Align(
@@ -91,7 +94,7 @@ Widget firstPage(BuildContext context) {
         width: appWidth(context),
       ),
       CustomText(
-        top: appheight(context) * 0.04,
+        top: 10,
         text: 'Find home services near you',
         color: colorScheme(context).tertiary,
         fontSize: AppTextSize.headlineMediumFont,
@@ -99,7 +102,6 @@ Widget firstPage(BuildContext context) {
         fontFamily: poppins(),
       ),
       CustomText(
-        top: appheight(context) * 0.02,
         text:
             'Choose from a range of services such as makeup, hair, heena and nails! ',
         fontSize: AppTextSize.bodySmallFont,
@@ -120,7 +122,7 @@ Widget secondPage(BuildContext context) {
         width: appWidth(context),
       ),
       CustomText(
-        top: appheight(context) * 0.04,
+        top: 10,
         text: 'Book through the App',
         color: colorScheme(context).tertiary,
         fontSize: AppTextSize.headlineMediumFont,
@@ -128,7 +130,6 @@ Widget secondPage(BuildContext context) {
         fontFamily: poppins(),
       ),
       CustomText(
-        top: appheight(context) * 0.02,
         text:
             'Book a time slot for the service you require,make any payments where applicable and you are ready to go!',
         fontSize: AppTextSize.bodySmallFont,
@@ -149,7 +150,7 @@ Widget thirdPage(BuildContext context) {
         width: appWidth(context),
       ),
       CustomText(
-        top: appheight(context) * 0.04,
+        top: 10,
         text: 'For both clients and bussiness',
         color: colorScheme(context).tertiary,
         fontSize: AppTextSize.headlineMediumFont,
@@ -157,7 +158,6 @@ Widget thirdPage(BuildContext context) {
         fontFamily: poppins(),
       ),
       CustomText(
-        top: appheight(context) * 0.02,
         text:
             'Whether you are looking for a service or promoting your home bussiness, we haveoptions for everyone! ',
         fontSize: AppTextSize.bodySmallFont,
