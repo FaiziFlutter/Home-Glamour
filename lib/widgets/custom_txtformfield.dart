@@ -40,7 +40,7 @@ class CustomTxtformfield extends StatelessWidget {
               floatingLabelStyle: TextStyle(color: colorSchemeLight.onSurface),
               border: InputBorder.none,
               filled: true,
-              fillColor: colorSchemeLight.secondaryContainer),
+              fillColor: colorSchemeLight.secondaryContainer.withOpacity(0.8)),
         ),
       ],
     );

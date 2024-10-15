@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:home_glamour/const/app_paddings.dart';
 import 'package:home_glamour/const/global_var.dart';
 import 'package:home_glamour/utils/routes.dart';
-import 'package:home_glamour/utils/widget_themes/app_theme.dart';
 import 'package:home_glamour/widgets/custom_button.dart';
 
 import '../../../const/text_size.dart';
@@ -29,7 +28,7 @@ class Login extends StatelessWidget {
                 ),
                 CustomText(
                   text: 'HomeGlam',
-                  color: AppTheme.light.primaryColor,
+                  color: colorScheme(context).tertiary,
                   fontWeight: FontWeight.bold,
                   fontSize: AppTextSize.titleXLargeFont,
                   letterSpacing: 3,
@@ -39,7 +38,7 @@ class Login extends StatelessWidget {
                   fontSize: AppTextSize.titleMediumFont,
                   fontFamily: poppins(),
                 ),
-                const CustomTxtformfield(text: 'Email'),
+                const CustomTxtformfield(text: 'Email', ),
                 const CustomTxtformfield(text: 'Password'),
                 TextButton(
                   onPressed: () {
@@ -49,11 +48,11 @@ class Login extends StatelessWidget {
                     top: 10,
                     bottom: 10,
                     text: "Forgot Password",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
+                    fontSize: 15,
                   ),
                 ),
                 CustomButton(
+                  color: colorScheme(context).secondary,
                   onTap: () {
                     Get.toNamed(AppRoutes.agreement);
                   },
@@ -73,7 +72,8 @@ class Login extends StatelessWidget {
                       onPressed: () {
                         Get.offAndToNamed(AppRoutes.register);
                       },
-                      child: const CustomText(
+                      child: CustomText(
+                        color: colorScheme(context).tertiary,
                         text: "Register",
                         left: 0,
                       ),

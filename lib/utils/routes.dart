@@ -6,6 +6,7 @@ import 'package:home_glamour/app/screens/home_screen/home_screen.dart';
 import 'package:home_glamour/app/screens/onboarding/agreement.dart';
 import 'package:home_glamour/app/screens/onboarding/introduction_screen.dart';
 import 'package:home_glamour/app/screens/onboarding/welcome_screen.dart';
+import 'package:home_glamour/app/screens/splash/splash_screen.dart';
 
 import '../widgets/bottom_navigation_bar.dart';
 
@@ -17,6 +18,9 @@ class AppRoutes {
   static const String forgetPassword = '/forgetPassword';
   static const String agreement = '/agreement';
   static const String homeScreen = '/homescreen';
+
+  static const String splashscreen = '/splashscreen';
+
   static const String bottomBar = '/bottomBar';
 
   static final routes = [
@@ -32,5 +36,6 @@ class AppRoutes {
         name: AppRoutes.bottomBar,
         page: () => const BottomNavigationBarScreens()),
     GetPage(name: AppRoutes.homeScreen, page: () => const HomeScreen()),
+    GetPage(name: AppRoutes.splashscreen, page: () => const SplashScreen()),
   ];
 }
