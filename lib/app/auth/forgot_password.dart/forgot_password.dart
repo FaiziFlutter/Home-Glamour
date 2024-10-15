@@ -32,6 +32,7 @@ class ForgotPassword extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+
                 for (int i = 1; i <= 6; i++) const OTPField(),
               ],
             ),

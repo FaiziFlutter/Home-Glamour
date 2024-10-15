@@ -2,9 +2,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:home_glamour/const/constants.dart';
+import 'package:get/get.dart';
 import 'package:home_glamour/const/global_var.dart';
 
+import '../../../const/text_size.dart';
 import '../../../gen/assets.gen.dart';
 import '../../../widgets/custom_text.dart';
 import '../onboarding/introduction_screen.dart';
@@ -41,8 +42,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color.fromARGB(0xffDB9080, 0xffffffff, 0, 0),
-                  Color.fromRGBO(0xffDB9080, 0xffffffff, 0, 0)
+                  Color.fromARGB(0xfff39682, 0xffffffff, 0, 0),
+                  Color.fromRGBO(0xfff39682, 0xffffffff, 0, 0)
                 ]
             )
         ),
@@ -50,10 +51,10 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Assets.images.logo.image(),
-           CustomText( text: "HomeGlam", top: 15,
-              letterSpacing: 6,
-             fontWeight: bold,
-            fontSize: 22,
+           CustomText( text: 'app_name'.tr,
+             fontWeight: FontWeight.bold,
+             fontSize: AppTextSize.titleXLargeFont,
+             letterSpacing: 3,
              fontFamily: poppins(),
             ),
           ],

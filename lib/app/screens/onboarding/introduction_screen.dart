@@ -25,8 +25,8 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
       width: currentPage == index ? 24 : 14,
       decoration: BoxDecoration(
         color: currentPage == index
-            ? colorScheme(context).primary
-            : colorScheme(context).primary.withOpacity(0.5),
+            ? colorScheme(context).secondary
+            : colorScheme(context).secondary.withOpacity(0.5),
         borderRadius: BorderRadius.circular(6.0),
       ),
     );
@@ -35,44 +35,47 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          SizedBox(
-            height: appheight(context) * 0.9,
-            child: PageView(
-              controller: _pageController,
-              onPageChanged: (index) {
-                setState(() {
-                  currentPage = index;
-                });
-              },
-              children: [
-                firstPage(context),
-                secondPage(context),
-                thirdPage(context),
-              ],
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              buildIndicator(0),
-              buildIndicator(1),
-              buildIndicator(2),
-            ],
-          ),
-          if (currentPage == 2)
-            Align(
-              alignment: AlignmentDirectional.bottomEnd,
-              child: CustomButton(
-                text: 'Next',
-                mRight: 8,
-                onTap: () {
-                  Get.offNamed(AppRoutes.welcomeScreen);
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: appheight(context) * 0.9,
+              child: PageView(
+                controller: _pageController,
+                onPageChanged: (index) {
+                  setState(() {
+                    currentPage = index;
+                  });
                 },
+                children: [
+                  firstPage(context),
+                  secondPage(context),
+                  thirdPage(context),
+                ],
               ),
             ),
-        ],
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                buildIndicator(0),
+                buildIndicator(1),
+                buildIndicator(2),
+              ],
+            ),
+            if (currentPage == 2)
+              Align(
+                alignment: AlignmentDirectional.bottomEnd,
+                child: CustomButton(
+                  color: colorScheme(context).tertiary,
+                  text: 'Next',
+                  mRight: 8,
+                  onTap: () {
+                    Get.offNamed(AppRoutes.welcomeScreen);
+                  },
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }
@@ -90,7 +93,7 @@ Widget firstPage(BuildContext context) {
       CustomText(
         top: appheight(context) * 0.04,
         text: 'Find home services near you',
-        color: colorScheme(context).primary,
+        color: colorScheme(context).tertiary,
         fontSize: AppTextSize.headlineMediumFont,
         fontWeight: FontWeight.w600,
         fontFamily: poppins(),
@@ -119,7 +122,7 @@ Widget secondPage(BuildContext context) {
       CustomText(
         top: appheight(context) * 0.04,
         text: 'Book through the App',
-        color: colorScheme(context).primary,
+        color: colorScheme(context).tertiary,
         fontSize: AppTextSize.headlineMediumFont,
         fontWeight: FontWeight.w600,
         fontFamily: poppins(),
@@ -148,7 +151,7 @@ Widget thirdPage(BuildContext context) {
       CustomText(
         top: appheight(context) * 0.04,
         text: 'For both clients and bussiness',
-        color: colorScheme(context).primary,
+        color: colorScheme(context).tertiary,
         fontSize: AppTextSize.headlineMediumFont,
         fontWeight: FontWeight.w600,
         fontFamily: poppins(),

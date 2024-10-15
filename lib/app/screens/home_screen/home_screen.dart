@@ -19,21 +19,21 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                CustomText(
+              Row(
+              children:  [
+                const CustomText(
                   text: 'Hello, Maria',
                   fontSize: AppTextSize.titleLargeFont,
                 ),
-                Spacer(),
+                const Spacer(),
                 Assets.icons.icNotification.svg(),
               ],
             ),
-            CustomText(
+            const CustomText(
               text: "Let's Explore categories to find best services for you.",
               textAlign: TextAlign.start,
             ),
-            CustomText(
+            const CustomText(
               text: 'Explore Categories',
               fontSize: AppTextSize.titleMediumFont,
             ),
