@@ -19,6 +19,7 @@ class CustomText extends StatelessWidget {
     this.left,
     this.right,
     this.textAlign,
+    this.overflow,
   });
   final String text;
   final Color? backgroundColor;
@@ -34,6 +35,7 @@ class CustomText extends StatelessWidget {
   final double? left;
   final double? right;
   final TextAlign? textAlign;
+  final TextOverflow? overflow;
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +46,8 @@ class CustomText extends StatelessWidget {
           bottom: bottom ?? 2,
           right: right ?? 0),
       child: Text(
+        overflow: overflow,
+        maxLines: 3,
         text,
         softWrap: true,
         textAlign: textAlign ?? TextAlign.center,
