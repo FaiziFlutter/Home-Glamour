@@ -9,6 +9,8 @@ import 'package:home_glamour/const/text_size.dart';
 import 'package:home_glamour/gen/assets.gen.dart';
 import 'package:home_glamour/widgets/custom_text.dart';
 
+import '../notifications/notification_screen.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -50,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         .fontFamily,
                     fontSize: AppTextSize.titleXLargeFont,
                   ),
-                  CustomText(
+                  const CustomText(
                     top: 0,
                     left: 0,
                     bottom: 0,
@@ -59,9 +61,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const Spacer(),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const NotificationScreen()));
+                    },
                     child: Container(
-                        color: colorSchemeLight.secondaryContainer,
                         child: Assets.icons.icNotification.svg()),
                   ),
                 ],

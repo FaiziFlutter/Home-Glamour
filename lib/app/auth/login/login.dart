@@ -49,7 +49,6 @@ class Login extends StatelessWidget {
                     top: 10,
                     bottom: 10,
                     text: "Forgot Password",
-                    fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),
                 ),
