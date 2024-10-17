@@ -12,3 +12,4 @@ double appWidth(context) => MediaQuery.sizeOf(context).width;
 String? poppins() => GoogleFonts.poppins().fontFamily;
 
 FontWeight bold() => FontWeight.bold;
+

@@ -234,6 +234,7 @@ class $AssetsIconsGen {
         icTermsOutlined,
         icUserOutlined,
         icVisa,
+        icVisa,
         icCategory,
       ];
 }

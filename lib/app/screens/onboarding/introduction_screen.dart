@@ -105,8 +105,12 @@ Widget firstPage(BuildContext context) {
         text:
             'Choose from a range of services such as makeup, hair, heena and nails! ',
         fontSize: AppTextSize.bodySmallFont,
-        fontWeight: FontWeight.w500,
         fontFamily: poppins(),
+        top: appheight(context) * 0.02,
+        bottom: 0,
+        overflow: TextOverflow.ellipsis,
+        color: colorScheme(context).onSecondary,
+        fontWeight: FontWeight.w500,
       ),
     ],
   );
@@ -161,8 +165,9 @@ Widget thirdPage(BuildContext context) {
         text:
             'Whether you are looking for a service or promoting your home bussiness, we have options for everyone! ',
         fontSize: AppTextSize.bodySmallFont,
-        fontWeight: FontWeight.w500,
         fontFamily: poppins(),
+        color: colorScheme(context).onSecondary,
+        fontWeight: FontWeight.w500,
       ),
     ],
   );

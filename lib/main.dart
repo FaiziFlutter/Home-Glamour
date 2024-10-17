@@ -18,19 +18,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Home Glamour',
-      locale: const Locale('en', 'US'),
-      fallbackLocale: const Locale('en', 'US'),
-      translations: Languages(),
-      initialRoute: AppRoutes.homeScreen,
-      getPages: AppRoutes.routes,
-      theme: ThemeData(
-        bottomNavigationBarTheme: buildBottomNavigationBarTheme(),
-        colorScheme: colorSchemeLight,
-        appBarTheme: lightAppBarTheme,
-        useMaterial3: true,
-      ),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Home Glamour',
+        locale: const Locale('en', 'US'),
+        fallbackLocale: const Locale('en', 'US'),
+        translations: Languages(),
+        initialRoute: AppRoutes.splashscreen,
+        getPages: AppRoutes.routes,
+        theme: ThemeData(
+          bottomNavigationBarTheme: buildBottomNavigationBarTheme(),
+          colorScheme: colorSchemeLight,
+          appBarTheme: lightAppBarTheme,
+          useMaterial3: true,
+        ));
   }
 }

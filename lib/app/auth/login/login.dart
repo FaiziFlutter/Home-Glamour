@@ -38,6 +38,7 @@ class Login extends StatelessWidget {
                   fontSize: AppTextSize.titleMediumFont,
                   fontFamily: poppins(),
                 ),
+                const CustomTxtformfield(text: 'Email'),
                 const CustomTxtformfield(text: 'Email', ),
                 const CustomTxtformfield(text: 'Password'),
                 TextButton(
@@ -48,7 +49,7 @@ class Login extends StatelessWidget {
                     top: 10,
                     bottom: 10,
                     text: "Forgot Password",
-                    fontSize: 15,
+                    fontSize: 16,
                   ),
                 ),
                 CustomButton(
@@ -72,7 +73,7 @@ class Login extends StatelessWidget {
                       onPressed: () {
                         Get.offAndToNamed(AppRoutes.register);
                       },
-                      child: CustomText(
+                      child:  CustomText(
                         color: colorScheme(context).tertiary,
                         text: "Register",
                         left: 0,
@@ -84,7 +85,7 @@ class Login extends StatelessWidget {
             ),
           ),
         ),
-      ),
+    ),
     );
   }
 }

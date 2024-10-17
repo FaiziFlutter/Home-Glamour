@@ -9,7 +9,7 @@ import 'package:home_glamour/app/screens/onboarding/introduction_screen.dart';
 import 'package:home_glamour/app/screens/onboarding/welcome_screen.dart';
 import 'package:home_glamour/app/screens/splash/splash_screen.dart';
 
-import '../widgets/bottom_navigation_bar.dart';
+import '../app/screens/notifications/notification_screen.dart';
 
 class AppRoutes {
   static const String introductionScreen = '/introductionScreen';
@@ -22,6 +22,7 @@ class AppRoutes {
   static const String splashscreen = '/splashscreen';
   static const String bottomBar = '/bottomBar';
   static const String exploreCategories = '/exploreCategories';
+  static const String notificationscreen = '/notification';
 
   static final routes = [
     GetPage(
@@ -32,14 +33,15 @@ class AppRoutes {
     GetPage(name: AppRoutes.forgetPassword, page: () => const ForgotPassword()),
     GetPage(name: AppRoutes.register, page: () => const Register()),
     GetPage(name: AppRoutes.agreement, page: () => const Agreement()),
-    GetPage(
-        name: AppRoutes.bottomBar,
-        page: () => const BottomNavigationBarScreens()),
     GetPage(name: AppRoutes.homeScreen, page: () => const HomeScreen()),
     GetPage(name: AppRoutes.splashscreen, page: () => const SplashScreen()),
     GetPage(
         name: AppRoutes.exploreCategories,
         page: () => const ExploreCategoriesScreen(),
         transition: Transition.leftToRightWithFade),
+    GetPage(name: AppRoutes.splashscreen, page: () => const SplashScreen()),
+    GetPage(
+        name: AppRoutes.notificationscreen,
+        page: () => const NotificationScreen()),
   ];
 }

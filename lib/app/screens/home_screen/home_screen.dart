@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:home_glamour/const/app_paddings.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:home_glamour/app/models/category.dart';
-import 'package:home_glamour/const/app_paddings.dart';
 import 'package:home_glamour/const/color_scheme.dart';
 import 'package:home_glamour/const/global_var.dart';
 import 'package:home_glamour/const/text_size.dart';
@@ -11,6 +10,8 @@ import 'package:home_glamour/gen/assets.gen.dart';
 import 'package:home_glamour/utils/categories.dart';
 import 'package:home_glamour/utils/routes.dart';
 import 'package:home_glamour/widgets/custom_text.dart';
+
+import '../notifications/notification_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -39,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontFamily: GoogleFonts.grandHotel().fontFamily,
                     fontSize: AppTextSize.titleXLargeFont,
                   ),
-                  CustomText(
+                  const CustomText(
                     top: 0,
                     left: 0,
                     bottom: 0,
@@ -48,7 +49,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const Spacer(),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const NotificationScreen()));
+                    },
                     child: Container(
                         height: 35,
                         width: 30,
