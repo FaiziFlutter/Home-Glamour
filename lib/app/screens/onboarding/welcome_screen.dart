@@ -8,6 +8,7 @@ import 'package:home_glamour/widgets/custom_text.dart';
 import 'package:home_glamour/widgets/custom_button.dart';
 
 import '../../../const/color_scheme.dart';
+import '../../../gen/assets.gen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -45,6 +46,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.asset('assets/images/logo.png'),
+            Assets.images.logo.image(),
             CustomText(
               text: 'app_name'.tr,
               fontWeight: FontWeight.bold,

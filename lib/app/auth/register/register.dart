@@ -47,6 +47,7 @@ class Register extends StatelessWidget {
                   mTop: 28,
                   onTap: () {},
                   text: 'Sign Up',
+                  color: colorScheme(context).secondary,
                   height: 50,
                   width: double.infinity,
                 ),
@@ -62,8 +63,9 @@ class Register extends StatelessWidget {
                       onPressed: () {
                         Get.offAndToNamed(AppRoutes.login);
                       },
-                      child: const CustomText(
+                      child: CustomText(
                         text: "Log In",
+                        color: colorScheme(context).tertiary,
                         left: 0,
                       ),
                     ),

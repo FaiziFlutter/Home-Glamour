@@ -25,8 +25,9 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
       width: currentPage == index ? 24 : 14,
       decoration: BoxDecoration(
         color: currentPage == index
-            ? colorScheme(context).primary
-            : colorScheme(context).primary.withOpacity(0.5),
+
+            ? colorScheme(context).secondary
+            : colorScheme(context).secondary.withOpacity(0.5),
         borderRadius: BorderRadius.circular(6.0),
       ),
     );
@@ -35,44 +36,50 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          SizedBox(
-            height: appheight(context) * 0.9,
-            child: PageView(
-              controller: _pageController,
-              onPageChanged: (index) {
-                setState(() {
-                  currentPage = index;
-                });
-              },
-              children: [
-                firstPage(context),
-                secondPage(context),
-                thirdPage(context),
-              ],
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              buildIndicator(0),
-              buildIndicator(1),
-              buildIndicator(2),
-            ],
-          ),
-          if (currentPage == 2)
-            Align(
-              alignment: AlignmentDirectional.bottomEnd,
-              child: CustomButton(
-                text: 'Next',
-                mRight: 8,
-                onTap: () {
-                  Get.offNamed(AppRoutes.welcomeScreen);
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: appheight(context) * 0.9,
+              child: PageView(
+                controller: _pageController,
+                onPageChanged: (index) {
+                  setState(() {
+                    currentPage = index;
+                  });
                 },
+                children: [
+                  firstPage(context),
+                  secondPage(context),
+                  thirdPage(context),
+                ],
               ),
             ),
-        ],
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                buildIndicator(0),
+                buildIndicator(1),
+                buildIndicator(2),
+              ],
+            ),
+            SizedBox(
+              height: appheight(context) * 0.01,
+            ),
+            if (currentPage == 2)
+              Align(
+                alignment: AlignmentDirectional.bottomEnd,
+                child: CustomButton(
+                  color: colorScheme(context).tertiary,
+                  text: 'Next',
+                  mRight: 8,
+                  onTap: () {
+                    Get.offNamed(AppRoutes.welcomeScreen);
+                  },
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }
@@ -96,12 +103,23 @@ Widget firstPage(BuildContext context) {
         fontFamily: poppins(),
       ),
       CustomText(
-        top: appheight(context) * 0.02,
         text:
             'Choose from a range of services such as makeup, hair, heena and nails! ',
-        fontSize: AppTextSize.bodySmallFont,
-        fontWeight: FontWeight.w500,
         fontFamily: poppins(),
+        top: appheight(context) * 0.02,
+        bottom: 0,
+        color: colorScheme(context).tertiary,
+        fontSize: appWidth(context) * 0.06,
+        fontWeight: FontWeight.w600,
+      ),
+      CustomText(
+        top: appheight(context) * 0.01,
+        bottom: 0,
+        overflow: TextOverflow.ellipsis,
+        text:
+            'Choose from a range of services such as makeup, hair, heena and nails! ',
+        fontSize: appheight(context) * 0.02,
+        fontWeight: FontWeight.w500,
       ),
     ],
   );
@@ -125,12 +143,13 @@ Widget secondPage(BuildContext context) {
         fontFamily: poppins(),
       ),
       CustomText(
-        top: appheight(context) * 0.02,
+        top: appheight(context) * 0.01,
+        bottom: 0,
+        overflow: TextOverflow.ellipsis,
         text:
             'Book a time slot for the service you require,make any payments where applicable and you are ready to go!',
-        fontSize: AppTextSize.bodySmallFont,
+        fontSize: appheight(context) * 0.02,
         fontWeight: FontWeight.w500,
-        fontFamily: poppins(),
       ),
     ],
   );
@@ -154,12 +173,23 @@ Widget thirdPage(BuildContext context) {
         fontFamily: poppins(),
       ),
       CustomText(
-        top: appheight(context) * 0.02,
         text:
             'Whether you are looking for a service or promoting your home bussiness, we haveoptions for everyone! ',
-        fontSize: AppTextSize.bodySmallFont,
-        fontWeight: FontWeight.w500,
         fontFamily: poppins(),
+        top: appheight(context) * 0.02,
+        bottom: 0,
+        color: colorScheme(context).tertiary,
+        fontSize: appWidth(context) * 0.06,
+        fontWeight: FontWeight.w600,
+      ),
+      CustomText(
+        top: appheight(context) * 0.01,
+        bottom: 0,
+        overflow: TextOverflow.ellipsis,
+        text:
+            'Whether you are looking for a service or promoting your home bussiness, we haveoptions for everyone! ',
+        fontSize: appheight(context) * 0.02,
+        fontWeight: FontWeight.w500,
       ),
     ],
   );

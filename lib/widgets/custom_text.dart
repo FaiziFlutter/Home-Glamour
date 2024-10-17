@@ -14,11 +14,12 @@ class CustomText extends StatelessWidget {
     this.fontStyle,
     this.letterSpacing,
     this.wordSpacing,
-    this.top = 2,
-    this.bottom = 2,
-    this.left = 12,
-    this.right = 12,
     this.textAlign,
+    this.left,
+    this.right,
+    this.bottom,
+    this.top,
+    this.overflow
   });
   final String text;
   final Color? backgroundColor;
@@ -34,16 +35,17 @@ class CustomText extends StatelessWidget {
   final double? left;
   final double? right;
   final TextAlign? textAlign;
+  final TextOverflow ? overflow;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-          left: left ?? 12,
+        left: left ?? 0,
+          right: right ?? 0 ,
           top: top ?? 2,
-          bottom: bottom ?? 2,
-          right: right ?? 12),
-      child: Text(
+          bottom: bottom ?? 2),
+      child : Text(
         text,
         softWrap: true,
         textAlign: textAlign ?? TextAlign.center,
