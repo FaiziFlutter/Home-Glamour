@@ -45,7 +45,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset('assets/images/logo.png'),
             Assets.images.logo.image(),
             CustomText(
               text: 'app_name'.tr,

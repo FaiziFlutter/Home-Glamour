@@ -43,10 +43,12 @@ class ForgotPassword extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            const CustomButton(
+            CustomButton(
               width: double.infinity,
               height: 50,
               text: 'Verify',
+              color: colorScheme(context).tertiary,
+
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -54,7 +56,7 @@ class ForgotPassword extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   child: CustomText(
-                    color: colorSchemeLight.primary,
+                    color: colorSchemeLight.tertiary,
                     text: 'Resend Code',
                   ),
                 ),

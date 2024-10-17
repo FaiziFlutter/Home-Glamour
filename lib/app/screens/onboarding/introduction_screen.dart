@@ -97,27 +97,19 @@ Widget firstPage(BuildContext context) {
       CustomText(
         top: appheight(context) * 0.04,
         text: 'Find home services near you',
-        color: colorScheme(context).primary,
+        color: colorScheme(context).tertiary,
         fontSize: AppTextSize.headlineMediumFont,
         fontWeight: FontWeight.w600,
         fontFamily: poppins(),
       ),
       CustomText(
         text:
-            'Choose from a range of services such as makeup, hair, heena and nails! ',
+        'Choose from a range of services such as makeup, hair, heena and nails! ',
         fontFamily: poppins(),
         top: appheight(context) * 0.02,
         bottom: 0,
-        color: colorScheme(context).tertiary,
-        fontSize: appWidth(context) * 0.06,
-        fontWeight: FontWeight.w600,
-      ),
-      CustomText(
-        top: appheight(context) * 0.01,
-        bottom: 0,
         overflow: TextOverflow.ellipsis,
-        text:
-            'Choose from a range of services such as makeup, hair, heena and nails! ',
+        color: colorScheme(context).onSecondary,
         fontSize: appheight(context) * 0.02,
         fontWeight: FontWeight.w500,
       ),
@@ -137,7 +129,7 @@ Widget secondPage(BuildContext context) {
       CustomText(
         top: appheight(context) * 0.04,
         text: 'Book through the App',
-        color: colorScheme(context).primary,
+        color: colorScheme(context).tertiary,
         fontSize: AppTextSize.headlineMediumFont,
         fontWeight: FontWeight.w600,
         fontFamily: poppins(),
@@ -147,7 +139,7 @@ Widget secondPage(BuildContext context) {
         bottom: 0,
         overflow: TextOverflow.ellipsis,
         text:
-            'Book a time slot for the service you require,make any payments where applicable and you are ready to go!',
+        'Book a time slot for the service you require,make any payments where applicable and you are ready to go!',
         fontSize: appheight(context) * 0.02,
         fontWeight: FontWeight.w500,
       ),
@@ -167,28 +159,20 @@ Widget thirdPage(BuildContext context) {
       CustomText(
         top: appheight(context) * 0.04,
         text: 'For both clients and bussiness',
-        color: colorScheme(context).primary,
+        color: colorScheme(context).tertiary,
         fontSize: AppTextSize.headlineMediumFont,
         fontWeight: FontWeight.w600,
         fontFamily: poppins(),
-      ),
-      CustomText(
-        text:
-            'Whether you are looking for a service or promoting your home bussiness, we haveoptions for everyone! ',
-        fontFamily: poppins(),
-        top: appheight(context) * 0.02,
-        bottom: 0,
-        color: colorScheme(context).tertiary,
-        fontSize: appWidth(context) * 0.06,
-        fontWeight: FontWeight.w600,
       ),
       CustomText(
         top: appheight(context) * 0.01,
         bottom: 0,
         overflow: TextOverflow.ellipsis,
         text:
-            'Whether you are looking for a service or promoting your home bussiness, we haveoptions for everyone! ',
-        fontSize: appheight(context) * 0.02,
+        'Whether you are looking for a service or promoting your home bussiness, we haveoptions for everyone! ',
+        fontFamily: poppins(),
+        color: colorScheme(context).onSecondary,
+        fontSize: appWidth(context) * 0.04,
         fontWeight: FontWeight.w500,
       ),
     ],
