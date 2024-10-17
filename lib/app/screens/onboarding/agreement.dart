@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 import 'package:home_glamour/const/global_var.dart';
-import 'package:home_glamour/const/text_size.dart';
 import 'package:home_glamour/widgets/custom_text.dart';
+
+import 'package:get/get.dart';
+import 'package:home_glamour/const/text_size.dart';
 
 import '../../../const/app_paddings.dart';
 import '../../../utils/routes.dart';
@@ -18,6 +18,7 @@ class Agreement extends StatefulWidget {
 
 class _AgreementState extends State<Agreement> {
   final value = false;
+
   bool isChecked = false;
   @override
   Widget build(BuildContext context) {
@@ -64,7 +65,7 @@ class _AgreementState extends State<Agreement> {
                     color: colorScheme(context).secondary,
                     text: 'Next',
                     onTap: () {
-                      Get.offAndToNamed(AppRoutes.homeScreen);
+                      Get.offAndToNamed(AppRoutes.bottomBar);
                     },
                   ),
                 ],
@@ -72,6 +73,6 @@ class _AgreementState extends State<Agreement> {
           ],
         ),
       ),
-    );
+      );
   }
 }

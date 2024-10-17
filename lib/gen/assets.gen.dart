@@ -234,6 +234,7 @@ class $AssetsIconsGen {
         icTermsOutlined,
         icUserOutlined,
         icVisa,
+        icVisa,
         icCategory,
       ];
 }
@@ -261,9 +262,13 @@ class $AssetsImagesGen {
   AssetGenImage get featured =>
       const AssetGenImage('assets/images/featured.png');
 
+  /// File path: assets/images/hairstyling.png
+  AssetGenImage get hairStyling =>
+      const AssetGenImage('assets/images/hairstyling.png');
+
   /// List of all assets
   List<AssetGenImage> get values =>
-      [img, img2, img3, logo, featured, servicesnear];
+      [img, img2, img3, logo, featured, servicesnear, hairStyling];
 }
 
 class $AssetsLauncherIconGen {

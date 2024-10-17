@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:home_glamour/app/models/category.dart';
 import 'package:home_glamour/const/app_paddings.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:home_glamour/const/color_scheme.dart';
 import 'package:home_glamour/const/global_var.dart';
 import 'package:home_glamour/const/text_size.dart';
 import 'package:home_glamour/gen/assets.gen.dart';
+import 'package:home_glamour/utils/categories.dart';
+import 'package:home_glamour/utils/routes.dart';
 import 'package:home_glamour/widgets/custom_text.dart';
+
+import '../notifications/notification_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,17 +21,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final availableCategories = [
-    Category(Assets.icons.icFace.path, 'Face'),
-    Category(Assets.icons.icHair.path, 'Hair'),
-    Category(Assets.icons.icNail.path, 'Nail'),
-    Category(Assets.icons.icBody.path, 'Body'),
-    Category(Assets.icons.icHenna.path, 'Henna'),
-    Category(Assets.icons.icPhotography.path, 'Photography'),
-    Category(Assets.icons.icDecore.path, 'Event decor'),
-    Category(Assets.icons.icTailoring.path, 'Tailoring'),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontFamily: GoogleFonts.grandHotel().fontFamily,
                     fontSize: AppTextSize.titleXLargeFont,
                   ),
-                  CustomText(
+                  const CustomText(
                     top: 0,
                     left: 0,
                     bottom: 0,
@@ -56,8 +49,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const Spacer(),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const NotificationScreen()));
+                    },
                     child: Container(
+                        height: 35,
+                        width: 30,
                         color: colorSchemeLight.secondaryContainer,
                         child: Assets.icons.icNotification.svg()),
                   ),
@@ -101,10 +102,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisCount: 4,
                       crossAxisSpacing: 5,
                       mainAxisSpacing: 15),
-                  itemCount: availableCategories.length,
+                  itemCount: Categories.values.length,
                   itemBuilder: (context, index) {
                     return InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Get.toNamed(AppRoutes.exploreCategories,
+                            arguments: Categories.values[index]);
+                      },
                       child: Column(
                         children: [
                           CircleAvatar(
@@ -114,11 +118,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: SvgPicture.asset(
-                                  availableCategories[index].icon),
+                                  Categories.values[index].iconPath),
                             ),
                           ),
                           CustomText(
-                            text: availableCategories[index].name,
+                            text: Categories.values[index].title,
                             fontSize: AppTextSize.bodyxSmallFont,
                           ),
                         ],
