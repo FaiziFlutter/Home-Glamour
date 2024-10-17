@@ -20,8 +20,8 @@ class CustomPadding extends StatelessWidget {
       padding: EdgeInsets.only(
           top: top ?? appheight(context) * 0.04,
           bottom: bottom ?? appheight(context) * 0.04,
-          left: appWidth(context) * 0.04,
-          right: appWidth(context) * 0.04),
+          left: appWidth(context) * 0.06,
+          right: appWidth(context) * 0.06),
       child: child,
     );
   }

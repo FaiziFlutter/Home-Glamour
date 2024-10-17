@@ -28,22 +28,21 @@ class _BottomNavigationBarScreensState
 
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-          selectedIconTheme: IconThemeData(color: colorSchemeLight.primary),
-          elevation: 0,
-          onTap: (value) => _selectPage(value),
-          currentIndex: activePageIndex,
-          items: [
-            BottomNavigationBarItem(
-                icon: Assets.icons.icHomeOutlined.svg(), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Assets.icons.icCategory.svg(), label: 'Category'),
-            BottomNavigationBarItem(
-                icon: Assets.icons.icMsgOutlined.svg(), label: 'Chat'),
-            BottomNavigationBarItem(
-              icon: Assets.icons.icUserOutlined.svg(),
-              label: 'Account',
-            ),
-          ]),
+        selectedItemColor: colorSchemeLight.primary,
+        unselectedItemColor: Colors.grey,
+        onTap: (value) => _selectPage(value),
+        currentIndex: activePageIndex,
+        items: [
+          BottomNavigationBarItem(
+              icon: Assets.icons.icHomeOutlined.svg(), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Assets.icons.icCategory.svg(), label: 'Category'),
+          BottomNavigationBarItem(
+              icon: Assets.icons.icMsgOutlined.svg(), label: 'Chat'),
+          BottomNavigationBarItem(
+              icon: Assets.icons.icUserOutlined.svg(), label: 'Account'),
+        ],
+      ),
       body: activeScreen,
     );
   }

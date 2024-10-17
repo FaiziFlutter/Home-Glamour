@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       locale: const Locale('en', 'US'),
       fallbackLocale: const Locale('en', 'US'),
       translations: Languages(),
-      initialRoute: AppRoutes.splashscreen,
+      initialRoute: AppRoutes.homeScreen,
       getPages: AppRoutes.routes,
       theme: ThemeData(
         bottomNavigationBarTheme: buildBottomNavigationBarTheme(),

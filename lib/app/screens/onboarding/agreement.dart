@@ -64,7 +64,7 @@ class _AgreementState extends State<Agreement> {
                     color: colorScheme(context).secondary,
                     text: 'Next',
                     onTap: () {
-                      Get.offAndToNamed(AppRoutes.homeScreen);
+                      Get.offAndToNamed(AppRoutes.bottomBar);
                     },
                   ),
                 ],
