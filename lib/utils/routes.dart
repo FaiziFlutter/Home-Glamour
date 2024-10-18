@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:home_glamour/app/auth/forgot_password.dart/forgot_password.dart';
 import 'package:home_glamour/app/auth/login/login.dart';
 import 'package:home_glamour/app/auth/register/register.dart';
+import 'package:home_glamour/app/gridview/hairdo.dart';
 import 'package:home_glamour/app/screens/home_screen/home_screen.dart';
 import 'package:home_glamour/app/screens/onboarding/agreement.dart';
 import 'package:home_glamour/app/screens/onboarding/introduction_screen.dart';
@@ -23,6 +24,8 @@ class AppRoutes {
 
   static const String bottomBar = '/bottomBar';
   static const String notificationscreen = '/notification';
+  static const String hairdo = '/hairdo';
+
 
   static final routes = [
     GetPage(
@@ -37,5 +40,6 @@ class AppRoutes {
     GetPage(name: AppRoutes.splashscreen, page: () => const SplashScreen()),
   GetPage(name: AppRoutes.splashscreen, page: () => const SplashScreen()),
     GetPage(name: AppRoutes.notificationscreen, page: () => const NotificationScreen()),
+    GetPage(name: AppRoutes.hairdo, page: () => const HairDo()),
   ];
 }

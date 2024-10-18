@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       fallbackLocale: const Locale('en', 'US'),
       translations: Languages(),
       builder: (context, child) => SafeArea(child: child!),
-      initialRoute: AppRoutes.splashscreen,
+      initialRoute: AppRoutes.hairdo,
       getPages: AppRoutes.routes,
       theme: ThemeData(
         bottomNavigationBarTheme: buildBottomNavigationBarTheme(),
