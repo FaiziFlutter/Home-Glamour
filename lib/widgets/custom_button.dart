@@ -48,7 +48,7 @@ class CustomButton extends StatelessWidget {
         height: height ?? appheight(context) * 0.055,
         width: width ?? appWidth(context) * 0.4,
         decoration: BoxDecoration(
-          color: color ?? AppTheme.light.primaryColor,
+          color: color ?? colorSchemeLight.tertiary,
           borderRadius: borderRadius ?? BorderRadius.circular(6),
         ),
         child: Center(

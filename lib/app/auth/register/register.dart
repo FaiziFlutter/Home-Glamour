@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:home_glamour/const/app_paddings.dart';
+import 'package:home_glamour/const/color_scheme.dart';
 import 'package:home_glamour/const/global_var.dart';
 import 'package:home_glamour/utils/routes.dart';
 import 'package:home_glamour/utils/widget_themes/app_theme.dart';
@@ -47,7 +48,7 @@ class Register extends StatelessWidget {
                   mTop: 28,
                   onTap: () {},
                   text: 'Sign Up',
-                  color: colorScheme(context).secondary,
+                  color: colorSchemeLight.tertiary,
                   height: 50,
                   width: double.infinity,
                 ),
