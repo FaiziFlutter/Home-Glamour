@@ -48,7 +48,6 @@ class ForgotPassword extends StatelessWidget {
               height: 50,
               text: 'Verify',
               color: colorScheme(context).tertiary,
-
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

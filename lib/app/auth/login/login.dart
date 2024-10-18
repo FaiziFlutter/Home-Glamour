@@ -38,8 +38,9 @@ class Login extends StatelessWidget {
                   fontSize: AppTextSize.titleMediumFont,
                   fontFamily: poppins(),
                 ),
-                const CustomTxtformfield(text: 'Email'),
-                const CustomTxtformfield(text: 'Email', ),
+                const CustomTxtformfield(
+                  text: 'Email',
+                ),
                 const CustomTxtformfield(text: 'Password'),
                 TextButton(
                   onPressed: () {
@@ -53,7 +54,6 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 CustomButton(
-                  color: colorScheme(context).secondary,
                   onTap: () {
                     Get.toNamed(AppRoutes.agreement);
                   },
@@ -73,7 +73,7 @@ class Login extends StatelessWidget {
                       onPressed: () {
                         Get.offAndToNamed(AppRoutes.register);
                       },
-                      child:  CustomText(
+                      child: CustomText(
                         color: colorScheme(context).tertiary,
                         text: "Register",
                         left: 0,
@@ -85,7 +85,7 @@ class Login extends StatelessWidget {
             ),
           ),
         ),
-    ),
+      ),
     );
   }
 }

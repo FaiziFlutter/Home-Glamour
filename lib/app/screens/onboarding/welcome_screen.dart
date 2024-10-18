@@ -40,20 +40,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomPadding(
-        top: 38,
+        top: 50,
         bottom: 38,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Assets.images.logo.image(),
+            SizedBox(
+              height: 5,
+            ),
             CustomText(
               text: 'app_name'.tr,
               fontWeight: FontWeight.bold,
               fontSize: AppTextSize.titleXLargeFont,
               letterSpacing: 3,
-            ),
-            const SizedBox(
-              height: 1,
             ),
             CustomText(
               text: 'select_language'.tr,
